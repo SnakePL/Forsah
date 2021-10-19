@@ -24,8 +24,8 @@ const paramsProd = {
 }
 
 export default function () {
-//let res = http.get(url,params);
-//let res2 = http.get(urlstaging,paramsStaging);
+let res = http.get(url,params);
+let res2 = http.get(urlstaging,paramsStaging);
 let res3 = http.get(urlProd, paramsProd);
 
 };
