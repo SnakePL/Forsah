@@ -8,24 +8,30 @@ const token = 'af771b239f5ed911e8dc2c1cc494c53e';
 const tokenstaging = 'e7a84f1523f0fd57806630c0e2ae7021';
 const tokenProd = 'fa896529ac490ea4dd1dac9e7bae207a';
 const params = {
-    headers:{
+    headers: {
         "X-AUTH-TOKEN": token,
     }
 }
 const paramsStaging = {
-    headers:{
+    headers: {
         "X-AUTH-TOKEN": tokenstaging,
     }
 }
 const paramsProd = {
-    headers:{
+    headers: {
         "X-AUTH-TOKEN": tokenProd,
     }
 }
 
 export default function () {
-let res = http.get(url,params);
-let res2 = http.get(urlstaging,paramsStaging);
-let res3 = http.get(urlProd, paramsProd);
 
+    let res = http.get(url, params);
+    let res2 = http.get(urlstaging, paramsStaging);
+    let res3 = http.get(urlProd, paramsProd);
+
+    check(res, {
+        'is status code 200': (r) => r.status === 200,
+        'is response faster then 1s': (r) => r.timings.duration < 1000,
+        'nie zwraca errora': (r) => !r.error,
+    });
 };
