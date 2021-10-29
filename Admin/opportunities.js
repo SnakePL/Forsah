@@ -1,13 +1,8 @@
 import http from 'k6/http';
 import { check, group, sleep } from 'k6';
-import { rToken, rUrl } from './resources.js'
+import { rUrl, params } from './resources.js'
 
 let url = `${rUrl}/api/v1/opportunities?scope=opportunity-dashboard`;
-let params = {
-    headers: {
-        'X-AUTH-TOKEN': rToken
-    }
-}
 
 export let options = {
     Iterations: 100

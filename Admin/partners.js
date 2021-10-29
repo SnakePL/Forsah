@@ -1,13 +1,8 @@
 import http, { get } from 'k6/http';
 import { check, group, sleep } from 'k6';
-import { rToken, rUrl } from './resources.js'
+import { rUrl, params } from './resources.js'
 
 let url = `${rUrl}/api/v1/partners?scope=ops-partner-list`;
-let params = {
-    headers: {
-        "X-AUTH-TOKEN": rToken,
-    }
-}
 
 export let options = {
     Iterations: 100
