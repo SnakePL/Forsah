@@ -1,10 +1,11 @@
 import http from 'k6/http';
 import { check, group, sleep } from 'k6';
-let url = 'https://uat-forsah-api.910ths.sa/api/v1/businesses'
-let token = '9b635aac97f43938e787115b0f54db4c'
+import {rToken, rUrl } from './resources.js'
+
+let url = `${rUrl}/api/v1/businesses`;
 let params = {
     headers: {
-        'X-AUTH-TOKEN': token
+        'X-AUTH-TOKEN': rToken
     }
 }
 
@@ -22,6 +23,5 @@ export default function () {
             'is response faster then 1s': (r) => r.timings.duration < 1000,
             'nie zwraca errora': (r) => !r.error,
         });
-
     });
 };
