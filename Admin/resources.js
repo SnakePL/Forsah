@@ -8,6 +8,12 @@ let params = {
         'X-AUTH-TOKEN': rToken
     }
 }
+let checkList = {
+    'Is status code 200': (r) => r.status === 200,
+    'Is response faster than 1s': (r) => r.timings.duration < 1000,
+    'Is response faster than 2s': (r) => r.timings.duration < 2000,
+    'Is there an error in the response': (r) => !r.error,
+}
 module.exports = {
-    rToken, rUrl, params
+    rToken, rUrl, params, checkList
  }
