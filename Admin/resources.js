@@ -2,7 +2,7 @@ let rUrl = 'https://uat-forsah-api.910ths.sa'
 //let rUrl = 'https://forsa-api.910ths.sa'
 //let rUrl = 'https://cr-forsah-uat-api.k8s.910ths.sa'
 
-let rToken = 'd44f2afacc48d74f33fa9093627884a3'
+let rToken = '5726a8fcd918cb354feab3d6762b3c37'
 let params = {
     headers: {
         'X-AUTH-TOKEN': rToken
