@@ -5,11 +5,11 @@ import { rUrl, params, checkList } from "./resources.js";
 let url = `${rUrl}/api/v1/businesses`;
 
 export let options = {
-  Iterations: 100,
+  Iterations: 30,
 };
 
 export default function () {
-  group("Grupa Admin Biznesy", function () {
+  group("Group admin businesses", function () {
     let response = http.get(url, params);
     check(response, checkList);
   });

@@ -9,7 +9,7 @@ export let options = {
 };
 
 export default function () {
-  group("Grupa Admin Opportunities", function () {
+  group("Group admin opportunities", function () {
     let response = http.get(url, params);
     check(response, checkList);
   });

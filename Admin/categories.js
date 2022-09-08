@@ -9,7 +9,7 @@ export let options = {
 };
 
 export default function () {
-  group("Admin - Catrgories", function () {
+  group("Group admin catrgories", function () {
     let response = http.get(url, params);
     check(response, checkList);
   });

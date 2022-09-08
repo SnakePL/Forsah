@@ -9,7 +9,7 @@ export let options = {
 };
 
 export default function () {
-  group("Grupa Admin Partners", function () {
+  group("Group admin partners", function () {
     let response = http.get(url, params);
     check(response, checkList);
   });
