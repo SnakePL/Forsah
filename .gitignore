@@ -48,4 +48,10 @@ Thumbs.db
 *.mov
 *.wmv
 *.DS_Store
-/Admin/resources.js
+/admin/resources.js
+admin/resources.js
+resources.js
+/resources.js
+**/resources.js
+/admin/resources.js
+

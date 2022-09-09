@@ -1,7 +1,7 @@
 //let rUrl = "https://uat-forsah-api.910ths.sa";
 let rUrl = 'https://forsa-api.910ths.sa'
 
-let rToken = "xxx";
+let rToken = "xx3x";
 let params = {
   headers: {
     "X-AUTH-TOKEN": rToken,
