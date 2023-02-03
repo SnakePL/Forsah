@@ -1,5 +1,5 @@
-let rUrl = "https://uat-forsah-api.910ths.sa";
-//let rUrl = 'https://forsa-api.910ths.sa'
+let rUrl = "xxx";
+//let rUrl = 'xxx'
 
 let categoryId = "8620acda-74ce-4858-8e02-939ede117091";
 let rToken = "xxx";
